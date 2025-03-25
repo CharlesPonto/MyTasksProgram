@@ -74,12 +74,40 @@ h1 {
 
 .task-text {
     font-weight: 500;
+    margin-bottom: 5px;
 }
 
-.no-tasks {
-    text-align: center;
-    color: #6C757D;
-    font-style: italic;
+.task-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.update-btn, .delete-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.update-btn {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.delete-btn {
+    background-color: #E74C3C;
+    color: white;
+}
+
+.update-btn:hover {
+    background-color: #4A89DC;
+}
+
+.delete-btn:hover {
+    background-color: #C0392B;
 }
 
 .add-task-link {
@@ -121,7 +149,7 @@ h1 {
     font-size: 16px;
 }
 
-.form-group ul.errorlist {
+.form-group .errorlist {
     color: #E74C3C;
     list-style-type: none;
     margin-bottom: 10px;
@@ -161,4 +189,15 @@ h1 {
 
 .cancel-btn:hover {
     background-color: #495057;
+}
+
+.no-tasks {
+    text-align: center;
+    color: #6C757D;
+    padding: 20px;
+}
+
+#Working-for-edit{
+    text-align: center;
+    cursor: pointer;
 }

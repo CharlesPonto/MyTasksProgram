@@ -10,12 +10,16 @@
                     <div class="task-content">
                         <span class="task-text">{{ task }}</span>
                     </div>
+                    <div class="task-actions">
+                        <a href="{% url 'tasks:edit' %}" class="update-btn">Edit</a>
+                        <a href="{% url 'tasks:delete' forloop.counter0 %}" class="delete-btn">Delete</a>
+                    </div>
                 </div>
             {% endfor %}
         {% else %}
             <p class="no-tasks">No tasks yet. Add a new task!</p>
         {% endif %}
+        
+        <a href="{% url 'tasks:add' %}" class="add-task-link">+ Add New Task</a>
     </div>
-    
-    <a href="{% url 'tasks:add' %}" class="add-task-link">+ Add New Task</a>
 {% endblock %}

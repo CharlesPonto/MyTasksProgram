@@ -1,0 +1,21 @@
+{% extends "tasks/layout.html" %}
+
+{% block header %}Task Dashboard{% endblock %}
+
+{% block main %}
+    <div class="task-list">
+        {% if tasks %}
+            {% for task in tasks %}
+                <div class="task-item">
+                    <div class="task-content">
+                        <span class="task-text">{{ task }}</span>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p class="no-tasks">No tasks yet. Add a new task!</p>
+        {% endif %}
+    </div>
+    
+    <a href="{% url 'tasks:add' %}" class="add-task-link">+ Add New Task</a>
+{% endblock %}
